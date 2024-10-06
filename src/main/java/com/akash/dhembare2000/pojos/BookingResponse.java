@@ -1,4 +1,4 @@
-package com.akash.dhembare2000.ex_22092024.gson.Serialization;
+package com.akash.dhembare2000.pojos;
 
 public class BookingResponse {
     private Integer bookingid;
