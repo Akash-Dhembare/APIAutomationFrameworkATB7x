@@ -2,8 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="APIAutomationFrameworkATB7x">
+        <parameter name="url" value="https://prod.com"></parameter>
         <classes>
-            <class name="com.akash.dhembare2000.tests.integration.TCIntegrationFlow">
+            <class name="com.akash.dhembare2000.tests.integration.TCIntegrationSample">
             </class>
         </classes>
     </test>

@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="APIAutomationFrameworkATB7x">
         <classes>
-            <class name="com.akash.dhembare2000.tests.integration.TCIntegrationFlow">
+            <class name="com.akash.dhembare2000.tests.integration.TCIntegrationSample2">
             </class>
         </classes>
     </test>

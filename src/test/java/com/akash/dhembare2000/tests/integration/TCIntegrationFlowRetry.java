@@ -2,6 +2,7 @@ package com.akash.dhembare2000.tests.integration;
 
 import com.akash.dhembare2000.base.BaseTest;
 import com.akash.dhembare2000.endpoints.APIConstants;
+import com.akash.dhembare2000.listeners.RetryAnalyzer;
 import com.akash.dhembare2000.pojos.Booking;
 import com.akash.dhembare2000.pojos.BookingResponse;
 import com.akash.dhembare2000.utils.PropertyReader;
@@ -14,7 +15,8 @@ import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TCIntegrationFlow extends BaseTest {
+@Test(retryAnalyzer = RetryAnalyzer.class)
+public class TCIntegrationFlowRetry extends BaseTest {
 
     // Create a Booking , Create a Token
     // Get booking
@@ -121,7 +123,7 @@ public class TCIntegrationFlow extends BaseTest {
         requestSpecification.basePath(basePathDELETE).cookie("token", token);
         validatableResponse = RestAssured.given().spec(requestSpecification)
                 .when().delete().then().log().all();
-        validatableResponse.statusCode(201);
+        validatableResponse.statusCode(200);
 
     }
 }
